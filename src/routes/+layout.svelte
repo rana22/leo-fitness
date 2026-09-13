@@ -1,3 +1,5 @@
+
+
 <script lang="ts">
   import { onMount } from 'svelte';
   import type { Snippet } from 'svelte';
@@ -10,7 +12,6 @@
 
   import { announcements } from '$lib/data/announcements';
   import { setTheme, theme } from '$lib/state/theme.svelte';
-  export const prerender = true;
   let {
     children
   }: {
