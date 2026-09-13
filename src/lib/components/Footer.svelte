@@ -1,7 +1,10 @@
+<script lang="ts">
+  import { asset, resolve } from '$app/paths';
+</script>
 <footer class="border-t border-[var(--line)] bg-[var(--surface)]">
   <div class="container-shell grid gap-10 py-12 md:grid-cols-[1.4fr_1fr_1fr]">
     <div>
-      <img src="/brand/logo-dark.png" class="h-16 w-auto" alt="Leo Fitness & Gym" />
+      <img src={asset('/brand/logo-dark.png')} class="h-16 w-auto" alt="Leo Fitness & Gym" />
       <p class="mt-4 max-w-sm text-sm leading-6 text-[var(--text-muted)]">More than a gym. A place to train with discipline, grow with intention, and belong to a community that lifts you higher.</p>
       <p class="mt-5 text-[11px] uppercase tracking-[0.2em] text-[var(--brand)]">Fitness • Discipline • Community</p>
     </div>

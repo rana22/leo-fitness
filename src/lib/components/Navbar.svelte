@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { asset, resolve } from '$app/paths';
   import { page } from "$app/state";
   import { ArrowUpRight } from "@lucide/svelte";
   import Button from "./Button.svelte";
@@ -52,15 +53,15 @@
     class="container-shell flex h-[88px] items-center justify-between gap-5 lg:h-[96px]"
   >
     <a
-      href="/"
+      href={resolve('/')}
       aria-label="Leo Fitness and Gym home"
       class="focus-ring flex shrink-0 items-center"
     >
       <picture>
         <img
           src={theme.mode === "light"
-            ? "/brand/logo-light.png"
-            : "/brand/logo-dark.png"}
+            ? asset('/brand/logo-light.png')
+            : asset('/brand/logo-dark.png')}
           class="h-[66px] w-auto object-contain sm:h-[72px] lg:h-[78px]"
           alt="Leo Fitness & Gym"
         />
