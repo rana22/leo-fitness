@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { asset } from '$app/paths';
   import { onMount } from 'svelte';
   import {
     ArrowRight,
@@ -92,7 +93,7 @@
 >
   <!-- Hero image -->
   <img
-    src="/images/hero-athlete-clean.png"
+    src={asset("/images/hero-athlete-clean.png")}
     alt="Athlete training with dumbbells in a premium gym"
     class="
       absolute inset-y-0 right-0
