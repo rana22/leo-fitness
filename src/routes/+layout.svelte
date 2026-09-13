@@ -10,7 +10,7 @@
 
   import { announcements } from '$lib/data/announcements';
   import { setTheme, theme } from '$lib/state/theme.svelte';
-
+  export const prerender = true;
   let {
     children
   }: {
