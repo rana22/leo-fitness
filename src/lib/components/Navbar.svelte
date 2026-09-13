@@ -1,5 +1,6 @@
 <script lang="ts">
   import { asset, resolve } from '$app/paths';
+  import type { Pathname } from '$app/types';
   import { page } from "$app/state";
   import { ArrowUpRight } from "@lucide/svelte";
   import Button from "./Button.svelte";
@@ -7,12 +8,12 @@
   import ThemeToggle from "./ThemeToggle.svelte";
   import { theme } from "$lib/state/theme.svelte";
 
-  const links = [
-    ["Home", "/"],
-    ["Classes", "/classes"],
-    ["Membership", "/membership"],
-    ["About", "/about"],
-    ["Contact", "/contact"],
+  const links: Array<[label: string, href: Pathname]> = [
+    ['Home', '/'],
+    ['Classes', '/classes'],
+    ['Membership', '/membership'],
+    ['About', '/about'],
+    ['Contact', '/contact']
   ];
 
   const isActive = (href: string) =>
@@ -74,7 +75,7 @@
     >
       {#each links as [label, href]}
         <a
-          {href}
+          href={resolve(href)}
           aria-current={isActive(href) ? 'page' : undefined}
           class={getNavLinkClass(href)}
         >
