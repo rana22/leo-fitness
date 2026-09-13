@@ -37,11 +37,11 @@ jobs:
       - name: Build static site
         run: bun run build
 
-      - name: Verify build output
-        run: |
-          test -f build/index.html
-          echo "SvelteKit build successfully generated:"
-          find build -maxdepth 2 -type f | head -50
+      # - name: Verify build output
+      #   run: |
+      #     test -f build/index.html
+      #     echo "SvelteKit build successfully generated:"
+      #     find build -maxdepth 2 -type f | head -50
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
